@@ -1,6 +1,7 @@
 package com.fzs.auto_design.service;
 
-import com.baomidou.mybatisplus.service.IService;
+
+import com.fzs.auto_design.common.Response;
 import com.fzs.auto_design.entity.User;
 
 /**
@@ -11,8 +12,19 @@ import com.fzs.auto_design.entity.User;
  * @author 邹洪学
  * @since 2018-07-27
  */
-public interface IUserService extends IService<User> {
+public interface IUserService {
 
-    @Override
-    boolean insert(User user);
+    /**
+     * 新建用户
+     * @param user
+     * @return
+     */
+    Response insert(User user);
+
+    /**
+     * 更新用户
+     * @param user
+     * @return
+     */
+    Response update(User user);
 }
