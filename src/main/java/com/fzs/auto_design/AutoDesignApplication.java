@@ -6,6 +6,7 @@ import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.annotation.PostConstruct;
@@ -32,6 +33,12 @@ public class AutoDesignApplication extends WebMvcConfigurerAdapter {
 		// 将配置设置给转换器并添加到HttpMessageConverter转换器列表中
 		fastConvert.setFastJsonConfig(fastJsonConfig);
 		converters.add(fastConvert);
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/templates/static/**")
+				.addResourceLocations("classpath:/templates/static/");
 	}
 
 	public static void main(String[] args) {

@@ -18,6 +18,11 @@ public class Response implements Serializable {
         this.data = data;
     }
 
+    public Response(int code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
     public static Response successInstance(Object data) {
         return new Response(ResponseStatus.SUCCESS.getCode(), ResponseStatus.SUCCESS.getMsg(), data);
     }

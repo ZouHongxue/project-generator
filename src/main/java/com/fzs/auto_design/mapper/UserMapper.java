@@ -2,6 +2,8 @@ package com.fzs.auto_design.mapper;
 
 import com.fzs.auto_design.entity.User;
 
+import java.util.List;
+
 /**
  * <p>
  * 用户表 Mapper 接口
@@ -15,4 +17,6 @@ public interface UserMapper {
     void insert(User user);
 
     void update(User user);
+
+    List<User> getUserByName(User user);
 }

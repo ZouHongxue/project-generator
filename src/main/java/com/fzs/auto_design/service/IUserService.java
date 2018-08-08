@@ -3,6 +3,11 @@ package com.fzs.auto_design.service;
 
 import com.fzs.auto_design.common.Response;
 import com.fzs.auto_design.entity.User;
+import org.apache.ibatis.annotations.Select;
+import org.springframework.boot.web.servlet.server.Session;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * <p>
@@ -27,4 +32,6 @@ public interface IUserService {
      * @return
      */
     Response update(User user);
+
+    Response login(User user, HttpServletRequest request);
 }
