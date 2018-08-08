@@ -8,10 +8,14 @@
     <update id="update" parameterType="com.fzs.auto_design.entity.User">
         update user
         <trim prefix="set" suffixOverrides=",">
-            <if test="name != null">name = #{name},</if>
+            <if test="name != null">`name` = #{name},</if>
             <if test="password != null">password = #{password},</if>
             <if test="status != null">status = #{status},</if>
         </trim>
         where id = #{id}
     </update>
+    
+    <select id="getUserByName" parameterType="com.fzs.auto_design.entity.User" resultType="com.fzs.auto_design.entity.User">
+        select * from `user` where `name` = #{name}
+    </select>
 </mapper>

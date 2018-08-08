@@ -1,0 +1,38 @@
+
+
+.head {
+    font-size: 18px;
+    background-color: antiquewhite;
+    height: 75px;
+    line-height: 75px;
+    color: #333;
+    position: relative;
+    font-family: "Univers45", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+}
+
+.left {
+    display: table;
+    float: left;
+    padding: 2px 0 0 30px;
+    box-sizing: border-box;
+}
+
+.right {
+    display: table;
+    float: right;
+    padding: 2px 15px 0 0;
+    box-sizing: border-box;
+}
+
+.user {
+    font-size: 18px;
+    cursor: pointer;
+    color: cornflowerblue;
+}
+
+.logout {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #53e3a6;
+    cursor: pointer;
+}

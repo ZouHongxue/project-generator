@@ -20,10 +20,9 @@ spring:
     request-context-attribute: request
     #模板加载的位置
     template-loader-path: classpath:/templates
-    #前缀
-    suffix: .html
-    #后缀
-    prefix: /front
+    suffix: .ftl
+    settings:
+      template_update_delay: 0
 
 
 # mybatis plus配置
